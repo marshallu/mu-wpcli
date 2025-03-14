@@ -17,7 +17,7 @@
 		"php-stubs/wp-cli-stubs": "^2.11"
     },
 	"require": {
-        "composer/installers": "^1.0"
+        "composer/installers": "^2.3"
     },
     "extra": {
         "installer-paths": {
