@@ -5,14 +5,15 @@
  * @package Marshall_WPCLI
  */
 
-if ( ! defined( 'WP_CLI' ) || ! WP_CLI ) { // phpcs:ignore
-	return;
-}
+namespace MuWPCLI\Commands;
+
+use WP_CLI;
+use WP_CLI_Command;
 
 /**
- * Scans multisite for keywords and exports results to a CSV.
+ * Scans all active sites in a multisite network for specified keywords in posts and pages, exporting results to a CSV.
  */
-class Keyword_Scanner_Command {
+class Keyword_Scanner_Command extends WP_CLI_Command {
 	/**
 	 * Scans multisite for keywords and exports results to a CSV.
 	 *
@@ -127,4 +128,4 @@ class Keyword_Scanner_Command {
 	}
 }
 
-WP_CLI::add_command( 'mu_scan_keywords', 'Keyword_Scanner_Command' );
+WP_CLI::add_command( 'mu_get_urls', Keyword_Scanner_Command::class );

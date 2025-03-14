@@ -4,6 +4,11 @@
 	"keywords": ["wordpress", "muplugin"],
 	"description": "Custom WP CLI commands for Marshall University.",
 	"license": "MIT",
+	"autoload": {
+        "psr-4": {
+            "MuWPCLI\\": "src/"
+        }
+    },
     "require-dev": {
         "composer/installers": "^1.0",
         "dealerdirect/phpcodesniffer-composer-installer": "^0.7.1",

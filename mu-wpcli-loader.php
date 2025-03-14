@@ -10,6 +10,5 @@
  */
 
 if ( defined( 'WP_CLI' ) && WP_CLI ) {
-	require_once __DIR__ . '/mu-wpcli-commands/commands/class-get-urls-csv-command.php';
-	require_once __DIR__ . '/mu-wpcli-commands/commands/class-keyword-scanner-command.php';
+	require_once __DIR__ . '/vendor/autoload.php';
 }

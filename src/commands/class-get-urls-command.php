@@ -1,18 +1,19 @@
 <?php
 /**
- * Retrieves all URLs from the specified site and saves them to a CSV file.
+ * Scans all active sites in a multisite network for specified keywords in posts and pages, exporting results to a CSV.
  *
  * @package Marshall_WPCLI
  */
 
-if ( ! defined( 'WP_CLI' ) || ! WP_CLI ) { // phpcs:ignore
-	return;
-}
+namespace MuWPCLI\Commands;
+
+use WP_CLI;
+use WP_CLI_Command;
 
 /**
- * Retrieves all URLs from the specified site and saves them to a CSV file.
+ * Scans all active sites in a multisite network for specified keywords in posts and pages, exporting results to a CSV.
  */
-class Get_URLs_CSV_Command {
+class Get_Urls_Command extends WP_CLI_Command {
 	/**
 	 * Retrieves all URLs from the specified site and saves them to a CSV file.
 	 *
@@ -103,4 +104,4 @@ class Get_URLs_CSV_Command {
 	}
 }
 
-WP_CLI::add_command( 'mu_get_urls', 'Get_URLs_CSV_Command' );
+WP_CLI::add_command( 'mu_get_urls', 'Get_Urls_Command' );
