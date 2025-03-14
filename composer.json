@@ -1,0 +1,24 @@
+{
+	"name": "marshallu/mu-wpcli-commands",
+	"type": "wordpress-muplugin",
+	"keywords": ["wordpress", "muplugin"],
+	"description": "Custom WP CLI commands for Marshall University.",
+	"license": "MIT",
+    "require-dev": {
+        "composer/installers": "^1.0",
+        "dealerdirect/phpcodesniffer-composer-installer": "^0.7.1",
+        "squizlabs/php_codesniffer": "@stable",
+        "wp-coding-standards/wpcs": "^3.1",
+		"php-stubs/wp-cli-stubs": "^2.11"
+    },
+    "config": {
+        "allow-plugins": {
+			"dealerdirect/phpcodesniffer-composer-installer": true,
+			"composer/installers": true
+		}
+    },
+	"scripts": {
+		"format": "phpcbf  --extensions=php --standard=phpcs.xml.dist --report-summary --report-source",
+		"lint": "phpcs --extensions=php --standard=phpcs.xml.dist"
+	}
+}
